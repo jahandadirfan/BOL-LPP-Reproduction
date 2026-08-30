@@ -179,3 +179,8 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+.DS_Store
+# BOL-LPP project data and large artifacts
+data/raw/
+data/processed/
+models/
