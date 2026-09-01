@@ -184,3 +184,10 @@ cython_debug/
 data/raw/
 data/processed/
 models/
+*.pt
+*.pth
+*.ckpt
+optuna_study.db
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
