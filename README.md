@@ -25,6 +25,8 @@ My goal is to (1) faithfully reproduce the original methodology and evaluate whe
 
 While extracting exact figures from the paper, a unit/scaling inconsistency was identified in the original results table: classical models (ARMA, ARIMA, SARIMAX, XGBoost) report MAE in real dollar units (e.g., SARIMAX MAE = $8.003/MWh), while the deep learning models (BiLSTM, BOL-LPP) report MAE three orders of magnitude smaller (e.g., BOL-LPP MAE = $0.0044/MWh) — consistent with those being computed on normalized (0–1 scaled) data rather than inverse-transformed dollar values. This project reports **both** scaled and inverse-transformed (real-dollar) metrics for every model to enable a fair, consistent comparison, and treats resolving this discrepancy as part of the reproduction's contribution.
 
+Several other points in the paper are underspecified or ambiguous — including the mapping between ERCOT's load zones and weather zones, the meaning of "stratified" splitting for a time series, and the number of LSTM layers. See [`docs/deviations.md`](docs/deviations.md) for the full record of departures from the original paper and the reasoning behind each choice.
+
 ## Technologies
 
 * Python
